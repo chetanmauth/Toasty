@@ -1,4 +1,4 @@
-package com.chetan.toasty;
+package com.chetan.tossty;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.chetan.toasty.test", appContext.getPackageName());
+        assertEquals("com.chetan.tossty.test", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.chetan.toasty;
+package com.chetan.tossty;
 
 import org.junit.Test;
 

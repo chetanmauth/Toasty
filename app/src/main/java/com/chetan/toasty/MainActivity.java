@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.chetan.tossty.Tossy;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -11,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toaster.simpleToast(this,"Hi toast");
+        Tossy.showTossy(this,"this is toast");
     }
 }
