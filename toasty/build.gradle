@@ -10,6 +10,8 @@ android {
         minSdk 24
         targetSdk 33
 
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -45,7 +47,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'com.chetan.toasty'
             artifactId = 'toasty'
-            version = 'main-SNAPSHOT'
+            version = '1.0'
         }
     }
 }
