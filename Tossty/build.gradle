@@ -35,15 +35,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 }
 afterEvaluate {
-    publishing {
-        publications {
-            create("release", MavenPublication) {
-                // Use AAR artifact manually instead of components.release
-                artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+    afterEvaluate {
+        publishing {
+            publications {
+                create("release", MavenPublication) {
+                    artifact("$buildDir/outputs/aar/${project.getName()}-release.aar") {
+                        builtBy(tasks.named("bundleReleaseAar")) // ✅ Ensure dependency
+                    }
 
-                groupId = 'com.github.chetanmauth'
-                artifactId = 'Toasty'
-                version = '0.8'
+                    groupId = 'com.github.chetanmauth'
+                    artifactId = 'Toasty'
+                    version = '0.9'
+                }
             }
         }
     }
